@@ -10,3 +10,5 @@ afegir un filtre al xslt `<xsl:for-each select="catalog/cd[country='USA']">` i l
 eliminem el filte i fem un sort per artist `<xsl:for-each select="catalog/cd"><xsl:sort select='artist'/>`
 # Comit 4
 Mostrem els cds que tenen un preu menor a 10 `<xsl:for-each select="catalog/cd[ price &lt; 10 ]">`
+# Comit 5
+Utilitzant un if fem que els cds que tinguin un preu de 10 o més tinguin un gomet vermell i els de menys un verd `<td style="text-align:center"> <xsl:if test="price &lt; 10">🟢</xsl:if> <xsl:if test="price &gt; 10">🔴</xsl:if></td>`
