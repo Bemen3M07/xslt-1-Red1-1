@@ -12,25 +12,27 @@
       <th style="text-align:left">Price</th>
       <th style="text-align:left">Semaforo</th>
     </tr>
-    <xsl:for-each select="catalog/cd">
-    <tr>
-      <td><xsl:value-of select="title"/></td>
-      <td><xsl:value-of select="artist"/></td>
-      <td><xsl:value-of select="country"/></td>
-      <td><xsl:value-of select="price"/></td>
-        <xsl:choose>
-          <xsl:when test="price &lt; 10">
-              🟢
-          </xsl:when>
-          <xsl:when test="price &gt; 10">
-              🔴
-          </xsl:when>
-        </xsl:choose>
-    </tr>
-    </xsl:for-each>
+    <xsl:apply-templates select="catalog/cd"/>
   </table>
 </body>
 </html>
 </xsl:template>
+<xsl:template match="cd">
+  <tr>
+    <td><xsl:value-of select="title"/></td>
+    <td><xsl:value-of select="artist"/></td>
+    <td><xsl:value-of select="country"/></td>
+    <td><xsl:value-of select="price"/></td>
+    <td style="text-align:center">
+      <xsl:choose>
+        <xsl:when test="price &lt; 10">
+          🟢
+        </xsl:when>
+        <xsl:when test="price &gt; 10">
+          🔴
+        </xsl:when>
+      </xsl:choose>
+    </td>
+  </tr>
 </xsl:stylesheet>
 

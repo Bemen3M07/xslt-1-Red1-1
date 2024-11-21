@@ -14,3 +14,5 @@ Mostrem els cds que tenen un preu menor a 10 `<xsl:for-each select="catalog/cd[ 
 Utilitzant un if fem que els cds que tinguin un preu de 10 o més tinguin un gomet vermell i els de menys un verd `<td style="text-align:center"> <xsl:if test="price &lt; 10">🟢</xsl:if> <xsl:if test="price &gt; 10">🔴</xsl:if></td>`
 # Comit 6
 fem el mateix que en el comit 5 l'nic que utilitzem l'etiqueta chose `<xsl:choose><xsl:when test="price &lt; 10">🟢</xsl:when><xsl:when test="price &gt; 10">🔴</xsl:when></xsl:choose>`
+# Comit 7
+Utilitzant el template apliquem l'estil
