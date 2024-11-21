@@ -6,3 +6,5 @@ Bemen repo for Victor Naranjo
 cambi al color de la capcelera `<tr bgcolor="blue">` i aplicar el template `<?xml-stylesheet type="text/xsl" href="cataleg.xslt"?>`
 # Comit 2
 afegir un filtre al xslt `<xsl:for-each select="catalog/cd[country='USA']">` i la seva etiqueta `<th style="text-align:left">Country</th>`
+# Comit 3
+eliminem el filte i fem un sort per artist `<xsl:for-each select="catalog/cd"><xsl:sort select='artist'/>`
